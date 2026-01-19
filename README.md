@@ -86,11 +86,15 @@ Error Responses
 {
   "detail": "Invalid API Key"
 }
-Causes:
+
+**Causes:**
+
 -Missing API key
+
 -Incorrect API key
 
 422 Validation Error
+
 {
   "detail": [
     {
@@ -100,48 +104,73 @@ Causes:
     }
   ]
 }
-Cause
+
+
+**Cause**
+
 Required fields missing or invalid data
 
 
 **Twitter Formatting Rules**
+
 Max 280 characters
+
 Uses up to 3 hashtags
+
 Appends URL if provided
 
-Example Tweet
-FastAPI Automation
+**Example Tweet:**
+
+**FastAPI Automation**
 
 This post was created on our website and automatically shared on Twitter...
 
 #fastapi #python #automation
+
 https://yourwebsite.com/posts/42
 
-Background Processing
+**Background Processing:**
+
 -Twitter posting happens asynchronously
+
 -API response is immediate
+
 -Prevents request timeouts
+
 -Scales safely
 
-Security Notes
+**Security Notes:**
+
 -API key stored in .env
+
 -Twitter credentials never exposed
+
 -Do NOT call this API directly from frontend JavaScript
 
-Recommended
+**Recommended:**
+
 -Call API from backend only
+
 -Rotate API keys periodically
+
 -Use HTTPS in production
 
-Testing
+**Testing:**
+
 Swagger UI
+
 http://127.0.0.1:8000/docs
 
 Steps:
+
 1.Open POST /ingest/post
+
 2.Click Try it out
+
 3.Enter x-api-key
+
 4.Provide request body
+
 5.Click Execute
 
 Environment Variables
